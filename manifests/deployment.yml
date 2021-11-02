@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "clutser2-558c"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "clutser2-558c"
+  template:
+    metadata:
+      labels:
+        app: "clutser2-558c"
+    spec:
+      containers:
+        - name: "clutser2-558c"
+          image: "exquitechprivatereg.azurecr.io/clutser2"
+          ports:
+          - containerPort: 8069
