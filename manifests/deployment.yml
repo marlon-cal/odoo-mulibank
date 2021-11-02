@@ -17,3 +17,9 @@ spec:
           image: "exquitechprivatereg.azurecr.io/clutser2"
           ports:
           - containerPort: 8069
+spec:
+ strategy:
+   type: RollingUpdate
+   rollingUpdate:
+     maxUnavailable: 0
+     maxSurge: 1
